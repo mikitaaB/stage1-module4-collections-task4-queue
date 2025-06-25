@@ -16,7 +16,7 @@ public class ArrayDequeCreator extends PriorityQueue<String> {
         while (!firstQueue.isEmpty() || !secondQueue.isEmpty()) {
             if (!firstQueue.isEmpty()) {
                 if (!arrayDeque.isEmpty()) {
-                    firstQueue.add(arrayDeque.pollFirst());
+                    firstQueue.add(arrayDeque.pollLast());
                 }
                 if (!firstQueue.isEmpty()) {
                     arrayDeque.addLast(firstQueue.poll());
@@ -28,7 +28,7 @@ public class ArrayDequeCreator extends PriorityQueue<String> {
             
             if (!secondQueue.isEmpty()) {
                 if (!arrayDeque.isEmpty()) {
-                    secondQueue.add(arrayDeque.pollFirst());
+                    secondQueue.add(arrayDeque.pollLast());
                 }
                 if (!secondQueue.isEmpty()) {
                     arrayDeque.addLast(secondQueue.poll());
